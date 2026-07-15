@@ -4,9 +4,11 @@ MCP server for fetching Songsterr tabs and transposing them between tunings and
 string counts — e.g. taking a song tabbed for 6-string C standard and re-fingering
 it, pitch-perfect, for a 7-string in B standard.
 
-**Status: scaffold.** The transposition engine is implemented and tested; the
-Songsterr client uses a mix of documented-legacy and unofficial endpoints that need
-live verification (see below).
+**Status: working, pending live API verification.** The transposition engine and
+the full Guitar Pro pipeline (parse → re-finger → ASCII / .gp5 export) are
+implemented and covered by tests, including an end-to-end GP5 round-trip. The
+Songsterr client uses a mix of documented-legacy and unofficial endpoints that
+still need verification against the live site (see below).
 
 ## Tools
 
@@ -73,12 +75,10 @@ re-fingering algorithm, cost model, and known limitations.
 
 ## License
 
-Intended license: [PolyForm Noncommercial 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0/)
-(drop the license text into `LICENSE` before publishing). Note the pedantry that
-matters for your README badges: noncommercial licenses are *source-available*, not
-OSI-approved open source. PolyForm NC is the cleanest widely-recognized choice for
-"free for everyone except commercial exploitation" and pairs naturally with
-Songsterr's own non-commercial API terms.
+[GPL-3.0](LICENSE) — free software in the OSI/FSF sense, commercial use included.
 
-Tab content fetched through this tool is copyrighted musical composition belonging
-to its rights holders; this tool is for personal practice use.
+Note the code license and the API terms are separate things: this *code* is GPL,
+but Songsterr's API itself permits only non-commercial use without their
+approval (see caveats above). Likewise, tab content fetched through this tool is
+copyrighted musical composition belonging to its rights holders; this tool is
+for personal practice use.
