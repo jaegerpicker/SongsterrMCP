@@ -25,7 +25,7 @@ from pathlib import Path
 import httpx
 
 BASE = "https://www.songsterr.com"
-USER_AGENT = "songsterr-mcp/0.1 (open-source, non-commercial; +https://github.com/CHANGEME/songsterr-mcp)"
+USER_AGENT = "songsterr-mcp/0.1 (open-source, non-commercial; +https://github.com/jaegerpicker/SongsterrMCP)"
 CACHE_DIR = Path.home() / ".cache" / "songsterr_mcp"
 
 
